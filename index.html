@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Astrologer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>🔮 AI Astrologer</h1>
+      <p class="subtitle">Enter your birth details to reveal your celestial snapshot.</p>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <h2>Birth Details</h2>
+        <form id="astroForm">
+          <div class="grid">
+            <label>
+              <span>Name</span>
+              <input type="text" id="name" placeholder="Your name" required/>
+            </label>
+            <label>
+              <span>Date of Birth</span>
+              <input type="date" id="dob" required/>
+            </label>
+            <label>
+              <span>Time of Birth</span>
+              <input type="time" id="tob" required/>
+            </label>
+            <label class="wide">
+              <span>Place of Birth</span>
+              <input type="text" id="pob" placeholder="City, Country" required/>
+            </label>
+          </div>
+          <button type="submit" class="btn">Get Reading</button>
+        </form>
+      </section>
+
+      <section class="card" id="readingCard" hidden>
+        <div class="reading-header">
+          <h2>✨ Your Reading</h2>
+          <button id="resetBtn" class="btn btn-secondary">Reset</button>
+        </div>
+        <div id="reading"></div>
+      </section>
+
+      <section class="card" id="qaCard" hidden>
+        <h2>Ask a Question</h2>
+        <div class="qa">
+          <input type="text" id="userQuestion" placeholder="Type a question about love, career, health, money..."/>
+          <button id="askBtn" class="btn">Ask</button>
+        </div>
+        <div id="answer" class="answer"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>For educational and entertainment purposes only.</p>
+      <a href="README.md" target="_blank" class="footer-link">Setup Guide</a>
+      <a href="https://github.com/new" target="_blank" class="footer-link">Push to GitHub</a>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
